@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 
 import { Placetag } from '../placetag';
 
@@ -7,11 +7,15 @@ import { Placetag } from '../placetag';
   templateUrl: './search-place.component.html',
   styleUrls: ['./search-place.component.css']
 })
+
 export class SearchPlaceComponent implements OnInit {
   cities:Placetag[] = [
   {name:"Paris",searchTag:"paris"},
   {name:"Madrid",searchTag:"madrid"},
-];
+  ];
+
+  selectedCity?:Placetag;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light p-2 font-weight-bold" style="background-color: #e3f2fd;">
     <a class="navbar-brand">
-    Bienvenidos a Geosearch
+    Elige una ciudad y podrás ver su información
     </a>
 </nav>
 <app-search-place></app-search-place>
-    <div class="row">
-            <app-city-info></app-city-info>
-    </div>
+<div class="row" *ng-if=true>
+    <app-city-info></app-city-info>
+</div>
