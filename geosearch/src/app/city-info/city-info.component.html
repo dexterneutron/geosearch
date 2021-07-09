@@ -1,19 +1,19 @@
-<div class="row">
+<div class="row" *ngIf="cityInfo.name">
 <div class="col-3">
 <h1 class="m-2 " >Paris</h1>
 <table class="table mw-25 m-2">
     <tbody>
       <tr>
         <th>Nombre</th>
-        <td>Paris</td>
+        <td>{{cityInfo.name}}</td>
       </tr>
       <tr>
         <th>Poblacion</th>
-        <td>2187526</td>
+        <td>{{cityInfo.population}}</td>
       </tr>
       <tr>
         <th> Wikipedia</th>
-        <td><a href="https://fr.wikipedia.org/wiki/fr:Paris?uselang=en" target="_blank">fr:Paris</a></td>
+        <td><a href="https://fr.wikipedia.org/wiki/fr:Paris?uselang=en" target="_blank">{{cityInfo.wikipedia}}</a></td>
       </tr>
     </tbody>
   </table>
