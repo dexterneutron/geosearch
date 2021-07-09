@@ -1,6 +1,7 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 
 import { Placetag } from '../placetag';
+import { GeosearchService } from '../geosearch.service';
 
 @Component({
   selector: 'app-search-place',
@@ -15,8 +16,13 @@ export class SearchPlaceComponent implements OnInit {
   ];
 
   selectedCity?:Placetag;
+  city?:any;
 
-  constructor() { }
+  loadCityDetails(){
+    this.geosearchService.getCity().subscribe(cityInfo=>this.city=cityInfo);
+    console.log("Son are u winning?")
+  }
+  constructor(public geosearchService: GeosearchService) { }
 
   ngOnInit(): void {
   }

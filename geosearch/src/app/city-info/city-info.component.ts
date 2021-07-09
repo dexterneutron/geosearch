@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { GeosearchService } from '../geosearch.service';
-import { city } from '../city';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-city-info',
@@ -9,15 +6,11 @@ import { city } from '../city';
   styleUrls: ['./city-info.component.css']
 })
 export class CityInfoComponent implements OnInit {
-  cityInfo:city={};
-  constructor(private geosearchService: GeosearchService) { 
-  }
+  @Input() cityInfo?:any;
 
-  getCityInfo() :void {
-    this.cityInfo=this.geosearchService.getCity();
+  constructor() { 
   }
 
   ngOnInit(): void {
-    this.getCityInfo();
   }
 }
