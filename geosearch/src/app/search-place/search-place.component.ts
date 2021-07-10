@@ -1,8 +1,11 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 
 import { Placetag } from '../placetag';
-import { GeosearchService } from '../geosearch.service';
 import { city } from '../city';
+
+import { GeosearchService } from '../geosearch.service';
+import { HistoryService } from '../history.service';
+
 @Component({
   selector: 'app-search-place',
   templateUrl: './search-place.component.html',
@@ -51,7 +54,14 @@ export class SearchPlaceComponent implements OnInit {
     return city;
   }
 
-  constructor(public geosearchService: GeosearchService) { }
+  storeSearch(){
+    this.historyService.createRecord()
+    .then(res => {
+        console.log("saved!");
+    });
+  }
+  
+  constructor(public geosearchService: GeosearchService,public historyService: HistoryService) { }
 
   ngOnInit(): void {
   }

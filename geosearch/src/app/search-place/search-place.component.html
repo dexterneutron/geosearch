@@ -2,6 +2,6 @@
     <select class="custom-select" [(ngModel)]="selectedCity" >
             <option *ngFor="let city of cities" [value]="city.name"> {{city.name}}</option>
     </select>
-    <button class="btn btn-outline-secondary" type="button" (click)="loadCityDetails()">Buscar</button>
+    <button class="btn btn-outline-secondary" type="button" (click)="loadCityDetails();storeSearch()">Buscar</button>
   </div>
   <app-city-info [cityInfo]="city"></app-city-info>

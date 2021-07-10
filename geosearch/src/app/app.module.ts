@@ -21,7 +21,7 @@ import { CityInfoComponent } from './city-info/city-info.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'geosearch')
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'geosearch'),
   ],
   providers: [],
   bootstrap: [AppComponent]
