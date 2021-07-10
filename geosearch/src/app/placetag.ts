@@ -1,4 +1,4 @@
 export interface Placetag {
-    name: string;
-    searchTag: string;
+    name?: string;
+    searchTag?: string;
   }

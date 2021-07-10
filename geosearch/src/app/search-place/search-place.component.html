@@ -1,8 +1,6 @@
 <div class="input-group mb-3 p-2">
     <select class="custom-select" [(ngModel)]="selectedCity" >
-        <optgroup label="Elige una Ciudad">
-            <option *ngFor="let city of cities" [value]="city.searchTag"> {{city.name}}</option>
-        </optgroup>
+            <option *ngFor="let city of cities" [value]="city.name"> {{city.name}}</option>
     </select>
     <button class="btn btn-outline-secondary" type="button" (click)="loadCityDetails()">Buscar</button>
   </div>
