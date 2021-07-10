@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "geosearch-71aaa": {
+      "hosting": {
+        "geosearch": [
+          "geosearch-71aaa"
+        ]
+      }
+    }
+  }
+}
