@@ -9,7 +9,7 @@
       </tr>
       <tr>
         <th>Poblacion</th>
-        <td>{{cityInfo.population}}</td>
+        <td>{{cityInfo.population | number}} /hab</td>
       </tr>
       <tr>
         <th> Wikipedia</th>
@@ -17,7 +17,7 @@
       </tr>
     </tbody>
   </table>
-  <button type="button" class="btn btn-primary btn-lg m-2">Cargar mapa</button>
+  <!--<button type="button" class="btn btn-primary btn m-2">Cargar mapa</button>-->
 </div>
 <div class="col-3">
   <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" [src]='getTrustedUrl()' style="border: 1px solid black"></iframe>
