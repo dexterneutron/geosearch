@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class CityInfoComponent implements OnInit {
   @Input() cityInfo?:any;
-
+  
   constructor(public sanitizer: DomSanitizer) { 
   }
 

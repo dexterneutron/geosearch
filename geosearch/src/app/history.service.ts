@@ -7,11 +7,15 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class HistoryService {
 
-  createRecord() {
+  createRecord(city: String) {
+    let record={
+      dateTime:new Date(),
+      cityName:city,
+    }
     return new Promise<any>((resolve, reject) =>{
         this.firestore
             .collection("searchhistory")
-            .add({"test":"test"})
+            .add(record)
             .then(res => {}, err => reject(err));
     });
 }

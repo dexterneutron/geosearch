@@ -55,10 +55,11 @@ export class SearchPlaceComponent implements OnInit {
   }
 
   storeSearch(){
-    this.historyService.createRecord()
-    .then(res => {
-        console.log("saved!");
-    });
+    if(this.selectedCity){
+        this.historyService.createRecord(this.selectedCity)
+        .then(res => {
+        });
+    }
   }
   
   constructor(public geosearchService: GeosearchService,public historyService: HistoryService) { }
