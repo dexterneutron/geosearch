@@ -19,6 +19,5 @@ export class HistoryService {
             .then(res => {}, err => reject(err));
     });
 }
-
   constructor(private firestore: AngularFirestore) { }
 }
